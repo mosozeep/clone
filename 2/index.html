@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>설해원</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" media="screen and (max-width: 1024px) and (min-width: 768px)" href="css/index-tablet.css">
+  <link rel="stylesheet" media="screen and (max-width: 767px)" href="css/index-mobile.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+ <a href="#main" id="btn-skip">본문바로가기</a>
+  <div id="wrap">
+    <header>
+      <h1 class="blind">설해원</h1>
+      <a href="#" id="pc-menu" class="blind">메뉴</a>
+      <a href="#" id="mobile-menu" class="blind mobile">메뉴</a>
+      <div id="gnb">
+        <section class="clear">
+          <article class="left">
+            <ul class="gnb-menu clear">
+              <li><a href="accommodation.html" class="blind">객실</a>
+                <ul class="sub-menu">
+                  <li><a href="mountain-hinokki.html">마운틴스테이</a></li>
+                  <li><a href="#">설해온천</a></li>
+                  <li><a href="#">골프텔</a></li>
+                  <li><a href="#">객실 이용안내</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="blind">주택</a>
+                <ul class="sub-menu">
+                  <li><a href="#">설해원 하우스</a></li>
+                  <li><a href="#">토지</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="blind">골프</a>
+                <ul class="sub-menu">
+                  <li><a href="#">씨뷰코스</a></li>
+                  <li><a href="#">샐몬코스</a></li>
+                  <li><a href="#">파인코스</a></li>
+                  <li><a href="#">신규코스</a></li>
+                  <li><a href="#">골프 이용안내</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="blind">온천</a>
+                <ul class="sub-menu">
+                  <li><a href="#">온천사우나</a></li>
+                  <li><a href="#">노천스파</a></li>
+                  <li><a href="#">온천수영장</a></li>
+                  <li><a href="#">면역공방</a></li>
+                  <li><a href="#">리메디스파</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="blind">다이닝</a>
+                <ul class="sub-menu">
+                  <li><a href="#">클럽하우스 레스토랑</a></li>
+                  <li><a href="#">설해온천 레스토랑</a></li>
+                  <li><a href="#">카페 &amp; 베이커리</a></li>
+                  <li><a href="#">설해바</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="blind">엑티비티</a>
+                <ul class="sub-menu">
+                  <li><a href="#">설해 둘레길</a></li>
+                  <li><a href="#">게임</a></li>
+                  <li><a href="#">보드게임</a></li>
+                  <li><a href="#">스크린골프</a></li>
+                  <li><a href="#">노래방</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="blind">문화공간</a>
+                <ul class="sub-menu">
+                  <li><a href="#">설해원 생각</a></li>
+                  <li><a href="#">서제 &amp; 레터룸</a></li>
+                  <li><a href="#">GS25</a></li>
+                </ul>
+              </li>
+              <li><a href="#" class="blind">스페셜 오퍼</a>
+                <ul class="sub-menu">
+                  <li><a href="#">패키지</a></li>
+                  <li><a href="#">이벤트</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="bottom-menu">
+              <a href="#">사진과 영상</a>
+              <a href="#">브로슈어</a>
+              <a href="#">브랜드 스토리</a>
+            </div>
+          </article>
+          <article class="right claer">
+            <nav class="login-menu">
+              <a href="#" class="btn-login">로그인</a>
+              <a href="#" class="btn-login">마이페이지</a>
+              <a href="#" class="btn-login">회원가입</a>
+              <a href="#" class="btn-book">예약하기</a>
+            </nav>
+            <ul class="member-menu">
+              <li><a href="#">설해원 회원</a></li>
+              <li><a href="#">전용객실</a></li>
+              <li><a href="#">토지</a></li>
+              <li class="ask clear">입회문의 <span>02.513.0000 <br>033.670.7776</span></li>
+            </ul>
+            <ul class="info-menu">
+              <li><a href="#">예약 및 취소 안내</a></li>
+              <li><a href="#">뉴스 &amp; 공지사항</a></li>
+              <li><a href="#">자료실</a></li>
+              <li><a href="#">사이트맵</a></li>
+              <li><a href="#">오시는 길</a></li>
+            </ul>
+            <div class="sns">
+              <a href="#"><i class="blind">인스타그램</i></a>
+              <a href="#"><i class="blind">유튜브</i></a>
+              <a href="#"><i class="blind">페이스북</i></a>
+            </div>
+          </article>
+          <a href="#" class="btn-close"></a>
+        </section>
+      </div>
+      <!--mobile-->
+      <div id="mobile-gnb" class="mobile">
+        <section class="top">
+          <h2>설해원</h2>
+          <a href="index.html" class="blind home">홈으로</a>
+        </section>
+        <section class="content">
+          <nav class="login-menu">
+            <ul>
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">마이페이지</a></li>
+              <li><a href="#">회원가입</a></li>
+              <li><a href="#">사이트맵</a></li>
+            </ul>
+
+            <a href="#" class="btn-brown">예약하기</a>
+          </nav>
+          <ul class="gnb-menu">
+            <li class="toggle"><a href="#">객실</a>
+              <ul class="sub-menu">
+                <li><a href="mountain-hinokki.html">마운틴스테이</a></li>
+                <li><a href="#">설해온천</a></li>
+                <li><a href="#">골프텔</a></li>
+                <li><a href="#">객실 이용안내</a></li>
+              </ul>
+            </li>
+            <li class="toggle"><a href="#">주택</a>
+              <ul class="sub-menu">
+                <li><a href="#">설해원 하우스</a></li>
+                <li><a href="#">토지</a></li>
+              </ul>
+            </li>
+            <li class="toggle"><a href="#">골프</a>
+              <ul class="sub-menu">
+                <li><a href="#">씨뷰코스</a></li>
+                <li><a href="#">샐몬코스</a></li>
+                <li><a href="#">파인코스</a></li>
+                <li><a href="#">신규코스</a></li>
+                <li><a href="#">골프 이용안내</a></li>
+              </ul>
+            </li>
+            <li class="toggle"><a href="#">온천</a>
+              <ul class="sub-menu">
+                <li><a href="#">온천사우나</a></li>
+                <li><a href="#">노천스파</a></li>
+                <li><a href="#">온천수영장</a></li>
+                <li><a href="#">면역공방</a></li>
+                <li><a href="#">리메디스파</a></li>
+              </ul>
+            </li>
+            <li class="toggle"><a href="#">다이닝</a>
+              <ul class="sub-menu">
+                <li><a href="#">클럽하우스 레스토랑</a></li>
+                <li><a href="#">설해온천 레스토랑</a></li>
+                <li><a href="#">카페 &amp; 베이커리</a></li>
+                <li><a href="#">설해바</a></li>
+              </ul>
+            </li>
+            <li class="toggle"><a href="#">엑티비티</a>
+              <ul class="sub-menu">
+                <li><a href="#">설해 둘레길</a></li>
+                <li><a href="#">게임</a></li>
+                <li><a href="#">보드게임</a></li>
+                <li><a href="#">스크린골프</a></li>
+                <li><a href="#">노래방</a></li>
+              </ul>
+            </li>
+            <li class="toggle"><a href="#">문화공간</a>
+              <ul class="sub-menu">
+                <li><a href="#">설해원 생각</a></li>
+                <li><a href="#">서제 &amp; 레터룸</a></li>
+                <li><a href="#">GS25</a></li>
+              </ul>
+            </li>
+            <li class="toggle"><a href="#">스페셜 오퍼</a>
+              <ul class="sub-menu">
+                <li><a href="#">패키지</a></li>
+                <li><a href="#">이벤트</a></li>
+              </ul>
+            </li>
+            <li><a href="#">예약 및 취소 안내</a></li>
+            <li><a href="#">뉴스 &amp; 공지사항</a></li>
+            <li><a href="#">오시는 길</a></li>
+            <li><a href="#">자료실</a></li>
+          </ul>
+        </section>
+        <section class="bottom">
+          <a href="#">사진과 영상</a>
+          <a href="#">브로슈어</a>
+          <a href="#">브랜드 스토리</a>
+        </section>
+        <a href="#" id="mobile-close" class="blind close">닫기</a>
+      </div>
+      <a href="#" class="btn-join">회원모집</a>
+      <a href="#" class="btn-join mobile">예약하기</a>
+      <span class="call">예약문의 033.673.9900</span>
+      <a href="index.html" class="home"><span class="blind">홈으로</span></a>
+    </header>
+    <main id="main">
+      <section id="main-visual">
+        <div class="image-slide">
+          <div class="box">
+            <ul class="slide">
+              <li>
+                <h2 class="blind">SPRING EDITION PACKAGE</h2>
+                <span class="blind">주중/주말</span>
+                <p class="blind">설해원에서 만끽하는 봄의 여정 'SPRING EDITION' 패키지</p>
+                <a href="#" class="btn-more">자세히보기</a>
+              </li>
+              <li>
+                <h2 class="blind">SMART PACKAGE</h2>
+                <span class="blind">주중/주말</span>
+                <p class="blind">실속있는 여행을 위한 'Smart' 패키지</p>
+                <a href="#" class="btn-more">자세히보기</a>
+              </li>
+              <li>
+                <h2 class="blind">SPRING EDITION PACKAGE</h2>
+                <span class="blind">주중/주말</span>
+                <p class="blind">오롯이 나에게 집중하는 건강한 시간 'LOVE ME' 패키지</p>
+                <a href="#" class="btn-more">자세히보기</a>
+              </li>
+              <li>
+                <h2 class="text">국내 최초로 온천수가 공급되는 수영장<br>풍부한 온천수 만큼이나 웃음이 넘쳐납니다</h2>
+              </li>
+              <li>
+                <h2 class="text">가족만을 위한 자리, 따뜻한 온천수<br>포켓 테이블과 카바나에서 누리는 따뜻한 휴식</h2>
+              </li>
+              <li>
+                <h2 class="text">체내 독소는 빼주고, 면역력은 더해주고,<br>활력은 곱해주는 면역공방</h2>
+              </li>
+              <li>
+                <h2 class="text">최고 수질의 설해온천수가 풍부하게 공급되는<br>온천사우나</h2>
+              </li>
+              <li>
+                <h2 class="text">설악산과 동해바다를 정원으로 삼고,<br>골프와 온천을 모두 누릴 수 있는 리조트</h2>
+              </li>
+            </ul>
+            <ul class="indicator"></ul>
+          </div>
+          <p class="control">
+            <a href="#" class="arrow btn-pre prev"><span class="blind">이전 이미지</span></a>
+            <a href="#" class="arrow btn-next next"><span class="blind">다음 이미지</span></a>
+          </p>
+          <a href="#video1" class="btn-down"><span class="blind">아래로 내려가기</span></a>
+        </div>
+        <!--image-slide-->
+      </section>
+      <section id="video1" class="section-video">
+        <article class="clear">
+          <div class="video"><video autoplay muted loop>
+              <source src="img/index/index_video1.mp4" type="video/mp4"></video></div>
+          <div class="desc">
+            <div class="vertical-text">
+              <h3>설해원의 품격</h3>
+              <p>설해원의 창을 여니<br> 바람과 함께 자연이 들어온다</p>
+              <p>설해원의 문을 여니<br> 사람과 함께 행복이 동행한다</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="slider1" class="section-slide">
+        <div class="image-slide pc">
+          <div class="box">
+            <ul class="slide">
+              <li><a href="#">
+                  <div class="text-area">
+                    <h2>객실</h2>
+                    <p>품격과 편안함이 조화를 이루고<br>개성과 다양함이 황금분할된 휴식</p>
+                    <span></span>
+                  </div>
+                </a></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <ul class="indicator"></ul>
+          </div>
+        </div>
+        <div class="image-slide mobile">
+          <div class="box">
+            <p class="dummy mobile">
+              <img src="img/index/mobile_section2_slide_01.jpg" alt="">
+            </p>
+            <ul class="slide">
+              <li><a href="#">
+                  <img src="img/index/mobile_section2_slide_01.jpg" alt="">
+                  <div class="text-area">
+                    <h2>객실</h2>
+                    <span class="blind">자세히 보기</span>
+                  </div>
+                </a></li>
+              <li>
+                <a href="#">
+                  <img src="img/index/mobile_section2_slide_02.jpg" alt="">
+                  <div class="text-area">
+                    <h2>마운틴스테이</h2>
+                    <span class="blind">자세히 보기</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/index/mobile_section2_slide_03.jpg" alt="">
+                  <div class="text-area">
+                    <h2>설해온천</h2>
+                    <span class="blind">자세히 보기</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/index/mobile_section2_slide_04.jpg" alt="">
+                  <div class="text-area">
+                    <h2>골프텔</h2>
+                    <span class="blind">자세히 보기</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <ul class="indicator"></ul>
+          </div>
+        </div>
+      </section>
+      <section id="list1" class="section-list">
+        <article>
+          <ul class="clear">
+            <li><a href="#">
+                <div class="text-area">
+                  <h2>마운틴스테이</h2>
+                  <p>최고의 전망과 품격에 편백의 향기가<br>더해진 독립적 빌라타입 객실</p><span class="blind">자세히 보기</span>
+                </div>
+                <div class="img-area">
+                   <p class="dummy">
+                     <img src="img/index/index_sec4_img01.jpg" alt="">
+                   </p>
+                  <img src="img/index/index_sec4_img01.jpg" alt="" class="img1">
+                  <img src="img/index/index_sec4_img01_on.jpg" alt="" class="img2">
+                </div>
+              </a></li>
+            <li><a href="#">
+                <div class="text-area">
+                  <h2>설해온천</h2>
+                  <p>최고 수질의 온천과 최고 품격 객실로<br>휴식의 水준이 다른 곳</p><span class="blind">자세히 보기</span>
+                </div>
+                <div class="img-area">
+                 <p class="dummy">
+                     <img src="img/index/index_sec4_img01.jpg" alt="">
+                   </p>
+                  <img src="img/index/index_sec4_img02.jpg" alt="" class="img1">
+                  <img src="img/index/index_sec4_img02_on.jpg" alt="" class="img2">
+                </div>
+              </a></li>
+            <li><a href="#">
+                <div class="text-area">
+                  <h2>골프텔</h2>
+                  <p>여유있는 공간과 심플한 인테리어로<br>편안하고 쾌적한 휴식</p><span class="blind">자세히 보기</span>
+                </div>
+                <div class="img-area">
+                 <p class="dummy">
+                     <img src="img/index/index_sec4_img01.jpg" alt="">
+                   </p>
+                  <img src="img/index/index_sec4_img03.jpg" alt="" class="img1">
+                  <img src="img/index/index_sec4_img03_on.jpg" alt="" class="img2">
+                </div>
+              </a></li>
+          </ul>
+        </article>
+      </section>
+      <section id="video2" class="section-video">
+        <article class="clear">
+          <div class="video"><video autoplay muted loop>
+              <source src="img/index/index_video2.mp4" type="video/mp4"></video></div>
+          <div class="desc">
+            <div class="vertical-text">
+              <h3>골프의 품격</h3>
+              <p>동해바다를 향해 티샷을 날리고<br> 대청봉을 향해 세컨샷을 날린다</p>
+              <p>설악과 동해를 갤러리 삼이 즐기니<br> 매일 라운딩을 해도 설레고<br> 행복하다</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="slider2" class="section-slide">
+        <div class="image-slide">
+          <div class="box">
+            <p class="dummy mobile">
+              <img src="img/index/mobile_section6_slide_01.jpg" alt="">
+            </p>
+            <ul class="slide">
+              <li><a href="#">
+                  <div class="text-area">
+                    <h2>골프</h2>
+                    <p>7회 연속 대한민국 10대 코스 선정,<br>무결점 코스를 완성하는 완벽한 코스 관리</p><span></span>
+                  </div>
+                </a></li>
+              <li></li>
+            </ul>
+            <ul class="indicator"></ul>
+          </div>
+        </div>
+      </section>
+      <section id="video3" class="section-video">
+        <article class="clear">
+          <div class="video"><video autoplay muted loop>
+              <source src="img/index/index_video3.mp4" type="video/mp4"></video></div>
+          <div class="desc">
+            <div class="vertical-text">
+              <h3>물의 품격</h3>
+              <p>설해원이 따뜻한 이유<br> 건강과 웃음이 가득한 이유</p>
+              <p>설해 온천의 물줄기로<br> 오는 이의 피로를 씻어주니</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="hot" class="section-full">
+        <div class="text-area">
+          <h2>온천</h2>
+          <p>사계절 내내 풍부한 수량과 최고의 수질, 최적의 온도로<br>설해원 골든비치에 따뜻한 가치를 더해주는 곳</p>
+        </div>
+      </section>
+      <section id="list2" class="section-list">
+        <article>
+          <ul class="clear pc list">
+            <li><a href="#">
+                <div class="text-area">
+                  <h2>온천사우나</h2>
+                  <p>설해온천수와 함께 울창한 숲을<br>조망하는 자연 그대로의 휴식</p><span class="blind">자세히 보기</span>
+                </div>
+                <div class="img-area">
+                  <img src="img/index/index_sec9_img01.jpg" alt="" class="img2">
+                </div>
+              </a></li>
+            <li><a href="#">
+                <div class="text-area">
+                  <h2>노천스파</h2>
+                  <p>설해온천 가장 높은 곳,<br>독립 카바나에서 누리는 휴식</p><span class="blind">자세히 보기</span>
+                </div>
+                <div class="img-area">
+                  <img src="img/index/index_sec9_img02.jpg" alt="" class="img2">
+                </div>
+              </a></li>
+            <li><a href="#">
+                <div class="text-area">
+                  <h2>온천수영장</h2>
+                  <p>태백과 마주한 절경 속에서<br>누리는 따뜻한 힐링과 웃음</p><span class="blind">자세히 보기</span>
+                </div>
+                <div class="img-area">
+                  <img src="img/index/index_sec9_img03.jpg" alt="" class="img2">
+                </div>
+              </a></li>
+            <li><a href="#">
+                <div class="text-area">
+                  <h2>면역공방</h2>
+                  <p>검증받은 파동석이 독소와<br>피로는 빼주고 건강은 올려주고</p><span class="blind">자세히 보기</span>
+                </div>
+                <div class="img-area">
+                  <img src="img/index/index_sec9_img04.jpg" alt="" class="img2">
+                </div>
+              </a></li>
+            <li><a href="#">
+                <div class="text-area">
+                  <h2>리메디스파</h2>
+                  <p>1:1 맞춤 스파 프로그램으로<br>활력을 되찾는 곳</p><span class="blind">자세히 보기</span>
+                </div>
+                <div class="img-area">
+                  <img src="img/index/index_sec9_img05.jpg" alt="" class="img2">
+                </div>
+              </a></li>
+          </ul>
+          <div class="image-slide mobile">
+            <div class="box">
+              <p class="dummy">
+                <img src="img/index/mobile_section6_slide_01.jpg" alt="" class="img2">
+              </p>
+              <ul class="slide">
+                <li>
+                  <a href="#">
+                    <img src="img/index/mobile_section6_slide_01.jpg" alt="">
+                    <div class="text-area">
+                      <h2>온천사우나</h2>
+                      <span class="blind">자세히 보기</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/index/mobile_section6_slide_02.jpg" alt="">
+                    <div class="text-area">
+                      <h2>노천사우나</h2>
+                      <span class="blind">자세히 보기</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/index/mobile_section6_slide_03.jpg" alt="">
+                    <div class="text-area">
+                      <h2>온천수영장</h2>
+                      <span class="blind">자세히 보기</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/index/mobile_section6_slide_04.jpg" alt="">
+                    <div class="text-area">
+                      <h2>면역공방</h2>
+                      <span class="blind">자세히 보기</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/index/mobile_section6_slide_05.jpg" alt="">
+                    <div class="text-area">
+                      <h2>리메디스파</h2>
+                      <span class="blind">자세히 보기</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <ul class="indicator"></ul>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="video4" class="section-video">
+        <article class="clear">
+          <div class="video">
+            <video autoplay muted loop>
+              <source src="img/index/index_video4.mp4" type="video/mp4"></video></div>
+          <div class="desc">
+            <div class="vertical-text">
+              <h3>가족의 품격</h3>
+              <p>내 가족은 행복해야 할<br>권리가 있기에</p>
+              <p>산책을 하든 글램핑을 하든<br>그저 뛰어 놀든</p>
+              <p>무엇을 해도 200%의<br>행복을 채운다</p>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="activity">
+        <article>
+          <div class="pc mobile-slide clear">
+            <div class="col2">
+              <a href="#">
+                <div class="text-area">
+                  <h2>설해바</h2>
+                  <p>중후한 느낌의 인테리어로 장중한 미를 뽐내고<br>풀과 가까운 곳은 퍼블릭하게 꾸미고 안으로 들어올수록 중후함이 느껴지는 Bar</p>
+                  <span class="blind">자세히 보기</span>
+                </div>
+              </a>
+            </div>
+            <div class="col1">
+              <a href="#">
+                <div class="text-area">
+                  <h2>설해둘레길</h2>
+                  <p>자연이 만든 산책로,<br>가족을 위한 행복로!</p>
+                  <span class="blind">자세히 보기</span>
+                </div>
+              </a>
+            </div>
+            <div class="col1">
+              <a href="#">
+                <div class="text-area">
+                  <h2>게임존</h2>
+                  <p>온가족이 함께 할 수 있는 각종 게임으로 가득한 공간<br>설해원의 행복발전소입니다</p>
+                  <span class="blind">자세히 보기</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="image-slide mobile">
+            <div class="box">
+              <p class="dummy">
+                <img src="img/index/mobile_section9_slide_01.jpg" alt="">
+              </p>
+              <ul class="slide">
+                <li>
+                  <a href="#">
+                    <img src="img/index/mobile_section9_slide_01.jpg" alt="">
+                    <div class="text-area">
+                      <h2>설해바</h2>
+                      <span class="blind">자세히 보기</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/index/mobile_section9_slide_02.jpg" alt="">
+                    <div class="text-area">
+                      <h2>설해둘레길</h2>
+                      <span class="blind">자세히 보기</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="img/index/mobile_section9_slide_03.jpg" alt="">
+                    <div class="text-area">
+                      <h2>게임존</h2>
+                      <span class="blind">자세히 보기</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <ul class="indicator"></ul>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section id="offer">
+        <article>
+          <h2>SPECIAL OFFER</h2>
+          <p>격이 다른 리조트, 설해원의 다양한 소식과 혜택으로 가득한 프로모션을 알려드립니다.</p>
+          <div class="banner-slide">
+            <div class="box">
+              <ul class="banner">
+                <li><a href="#">
+                    <div class="bg-img"><span class="event">이벤트</span></div>
+                    <p>라이프스타일 샵,'설해원 생각' 오픈!</p>
+                    <span>2020.05.06 ~ 2020.08.31</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="event">이벤트</span></div>
+                    <p>온천 수영장 주말 오픈!</p>
+                    <span>2020.05.06 ~ 2020.06.30</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="pacage">패키지</span></div>
+                    <p>기념일 패키지</p>
+                    <span>2020.04.21 ~ 2020.06.30</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="pacage">패키지</span></div>
+                    <p>SPRING EDITION 패키지(주중/주말)</p>
+                    <span>2020.05.05 ~ 2020.06.30</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="pacage">패키지</span></div>
+                    <p>SMART 패키지(주중/주말)</p>
+                    <span>2020.05.05 ~ 2020.06.30</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="pacage">패키지</span></div>
+                    <p>LOVE ME 패키지(주중/주말)</p>
+                    <span>2020.05.05 ~ 2020.06.30</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="event">이벤트</span></div>
+                    <p>리메디스파 spring promotion!</p>
+                    <span>2020.03.06 ~ 2020.05.31</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="event">이벤트</span></div>
+                    <p>면역기능 강화,파 김치 장어전골 출시!</p>
+                    <span>2020.04.23 ~ 2020.05.31</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="event">이벤트</span></div>
+                    <p>해시태그 이벤트</p>
+                    <span>2020.03.02 ~ 2020.03.31</span>
+                  </a></li>
+                <li><a href="#">
+                    <div class="bg-img"><span class="event">이벤트</span></div>
+                    <p>나도 설해원 작가</p>
+                    <span>2020.03.02 ~ 2020.03.31</span>
+                  </a></li>
+              </ul>
+            </div>
+            <ul class="indicator"></ul>
+            <p class="control">
+              <a href="#" class="arrow btn-pre prev"><span class="blind">이전 배너</span></a>
+              <a href="#" class="arrow btn-next next"><span class="blind">다음 배너</span></a>
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div class="inner">
+        <div class="top clear">
+          <nav class="fnb foot-l">
+            <a href="#">사진과 영상</a>
+            <a href="#">브로슈어</a>
+            <a href="#">브랜드 스토리</a>
+          </nav>
+          <div class="sns foot-r">
+            <a href="#"><i class="blind">인스타그램</i></a>
+            <a href="#"><i class="blind">유튜브</i></a>
+            <a href="#"><i class="blind">페이스북</i></a>
+          </div>
+        </div>
+        <div class="bottom clear">
+          <h2><a href="#">설해원</a></h2>
+          <nav class="sitemap">
+            <a href="#"><span>개인정보취급방침</span></a>
+            <a href="#"><span>이용약관</span></a>
+            <a href="#"><span>사이트맵</span></a>
+            <a href="#"><span>덕구온천리조트</span></a>
+          </nav>
+          <address>
+            <span>(주)새서울 레저</span> <span>강원도 양양군 손양면 공항로 230</span> <span>T.033)670-7700</span><span> F. 033)673-7313</span><br><span>서울사무소 서울특별시 강남구 압구정로 154</span> <span>T.02)547-2770</span> <span>F.02)515-9015 </span>
+          </address>
+          <p>
+            <span>대표이사: 권기범</span><span>사업자등록번호:227-81-09624</span><span>통신판매업신고 2019-강원양양-0026</span><br><span class="copy">&copy;SeolhaeOne. All Rights Reserved</span>
+          </p>
+          <a href="#" class="top mobile btn-top">TOP</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="quick-menu">
+    <a href="#">로그인</a>
+    <a href="#">예약<br>하기</a>
+    <a href="#">회원<br>모집</a>
+    <a href="#" class="mypage">마이<br>페이지</a>
+    <a href="#" class="btn-top">TOP</a>
+  </div>
+  <script src="js/common.js"></script>
+  <script src="js/menu.js"></script>
+  <script>
+    $('#main-visual').setImgSlide({
+      slideMode: 'fade',
+      timerS: 5000,
+    });
+    $('#slider1 div.image-slide.pc , #slider1 div.image-slide.mobile').setImgSlide({
+      timerS: 5000,
+    });
+    $('#slider2').setImgSlide({
+      slideMode: 'fade',
+      timerS: 5000,
+    });
+    $('#list2').setImgSlide({
+      timerS: 5000,
+    });
+    $('#activity').setImgSlide({
+      timerS: 5000,
+    });        
+    setBannerSlide('div.banner-slide');
+
+
+
+  </script>
+</body>
+
+</html>

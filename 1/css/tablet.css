@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+body.main .about-cans .can.left {left: -25%; background-size: 700px auto;}
+body.main .about-cans .can.right {left: 25%; background-size: 700px auto;}
+
+section .title-area .sup {font-size: 22px;}
+section .title-area .title {font-size: 45px;}
+section .title-area p .text {font-size: 17px; line-height: 1.5em;}
+section .title-area .sub {font-size: 18px;}
+
+.full .line-bg {width: 300px; height: 450px;}
+
+.about-cans .title-area .title {font-size: 40px;}
+.about-cans .can-title {padding: 0 7%;}
+.about-cans .can {background-size: 600px auto;}
+body.wines .about-cans .title-area .ml-of .num {font-size: 33px;}
+body.wines .about-cans .title-area .ml-of .word {font-size: 17px;}
+body.wines .about-cans .title-area .wine {font-size: 22px;}
+body.wines .about-cans .title-area p {font-size: 22px; margin-top: 20px;}
+body.wines .about-cans .title-area p strong {font-size: 30px;}
+
+
+/*main-footer*/
+#main-footer h6 {font-size: 30px;}
+#main-footer p , footer address {font-size: 17px;}
+#main-footer .half {padding: 0 8%;}
+
+/*intro*/
+#intro .title-area {padding: 0 10%; box-sizing: border-box;}
+
+
+

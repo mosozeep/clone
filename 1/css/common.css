@@ -1,0 +1,432 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+    font-family: 'Heavitas';
+    src:url('../font/Heavitas.ttf.woff') format('woff'),
+        url('../font/Heavitas.ttf.svg#Heavitas') format('svg'),
+        url('../font/Heavitas.ttf.eot'),
+        url('../font/Heavitas.ttf.eot?#iefix') format('embedded-opentype'); 
+        font-weight: normal;
+        font-style: normal;
+}
+body {overflow: hidden; font-size: 15px; font-family: 'Heavitas' , sans-serif; line-height: 1.1; color: #424242;}
+#wrap {overflow: hidden; width: 100%;}
+@media screen and (max-width: 1024px) {
+  body {overflow: visible;}
+}
+
+.mobile {display: none;}
+.filter {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+
+.btn-more {position: relative; display: inline-block; height: 35px; margin-top: 20px; padding: 9px 35px 8px 15px; box-sizing: border-box; border-radius: 10px; letter-spacing: 2px; font-size: 14px; color: #fff; font-family: 'Open Sans', sans-serif; transition: all 0.2s;}
+.btn-more:after {position: absolute; top: 0; right: 10px; display: block; width: 15px; height: 35px; margin-left: 5px; background: url(../img/button-arrow.png) no-repeat right center;content: ''; transition: all 0.2s;}
+.btn-more:hover {padding-right: 40px;}
+.btn-more:hover:after {width: 20px;}
+.btn-more.line {border: 1px solid #fff; padding-right: 50px; background: transparent;}
+.btn-more.line:hover {padding-right: 55px; background: rgba(255, 255, 255, 0.2);}
+.btn-more.line:before {position: absolute; top: 0; right: 30px; width: 5px; height: 33px; border-left: 1px solid #fff; content: ''; transition: all 0.2s;}
+.btn-more.line:hover:before {right: 35px;}
+.btn-down {position: absolute; bottom: 0; left: 50%; transform: translate(-50%,0); width: 45px; height: 45px; background: url(../img/hero-arrow-small.png) no-repeat center; background-size: 10px auto;}
+ 
+.full {position: relative; width: 100%; height: 100vh; overflow: hidden; transition: all ease 0.5s;}
+.full .title-area {position: relative; top: 50%; transform: translate(0,-50%); width: 100%;}
+.full .title-area span {display: block;}
+.full .title-area p .text {margin-top: 20px; font-family: 'Open Sans', sans-serif;}
+.full .half {position: absolute; width: 50%; height: 100%;}
+.full .half.right {top: 0; right: 0;}
+.full .half.left {top: 0; left: 0;}
+
+body.main section.full .half.photo {transition: all 0.8s ease; transition-delay: 0.1s;}
+body.main section.full .half.right.photo {right: -50%;}
+body.main section.full .half.left.photo {left: -50%;}
+body.main section.full.show .half.right.photo {right: 0;}
+body.main section.full.show .half.left.photo {left: 0;}
+body.main section.full .photo {background: no-repeat left center; background-size: cover;}
+
+/*
+body.wines .full {overflow: visible;}
+body.wines section.full .half.top {transition: transform 1s;}
+body.wines section.full .half.bottom {transition: transform 1s;}
+body.wines section.full.up .half.right {transform: translate(0,200%); z-index: -1;}
+body.wines section.full.show .half.right {transform: translate(0,0);}
+body.wines section.full.down .half.right {transform: translate(0,-200%); z-index: -1;}
+*/
+
+
+
+.full .line-bg {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); overflow: hidden;}
+.full .line-bg:before , .full .line-bg:after {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%) rotate(-45deg); display: block; width: 100vw; height: 100vh; background: url(../img/line-texture-horizontal.png) repeat; background-size: auto 10px; content: ''; transition: all 1s ease-out; transition-delay: 0.1s;}
+.full .line-bg:before {transform: translate(calc(-50% - 1000px),calc(-50% + 1000px)) rotate(-45deg);}
+.full.show .line-bg:before {transform: translate(-50%,-50%) rotate(-45deg);}
+.full .line-bg:after {background-position: 0 5px; transform: translate(calc(-50% + 1000px),calc(-50% - 1000px)) rotate(-45deg);}
+.full.show .line-bg:after {transform: translate(-50%,-50%) rotate(-45deg);}
+.first .btn-down {width: 125px; height: 33px; background: url(../img/hero-arrow.png) no-repeat top 1px left; background-size: 100%;}
+
+.visual-bg:before {content: ''; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: rgba(0,0,0,0.5);}
+
+#page-indicator {position: fixed; right: -10px; top: 50%; z-index: 100; transform: translate(0,-50%); opacity: 0; transition: all 0.5s;}
+#page-indicator.show {right: 20px; opacity: 1;}
+#page-indicator li {width: 10px; height: 10px;}
+#page-indicator li + li {margin-bottom: 10px;}
+#page-indicator li:first-child , #page-indicator li:nth-child(7) , #page-indicator li:last-child {display: none;}
+#page-indicator li a {display: block; width: 4px; height: 4px; margin: 0 auto; border-radius: 50%; background: #fff;}
+#page-indicator li.on a {width: 10px; height: 10px;}
+/*main-header*/
+#main-header {position: fixed; top: 0; left: 0; width: 100%; z-index: 10;}
+#main-header .header-logo {display: block; width: 75px; height: 75px; margin-top: 20px; padding: 12px 15px; box-sizing: border-box; background-color: #b11f24;}
+#main-header .header-logo #logo {width: 44px; fill: #fff;}
+#main-header .btn-gnb.pos {position: absolute; top: 20px; right: 20px;}
+#main-header .btn-gnb {display: block; width: 50px; height: 50px; border: none; box-sizing: border-box; background: url(../img/line-texture2.png); background-size: 5px;}
+#main-header .btn-gnb span {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); display: block; width: 30px; height: 3px; background: #fff;}
+#main-header .btn-gnb span:before , #main-header .btn-gnb span:after {position: relative; display: block; width: 100%; height: 100%; background: #fff; content: '';}
+#main-header .btn-gnb span:before {top: -9px;}
+#main-header .btn-gnb span:after {top: 6px;}
+/*#gnb*/
+#gnb {position: absolute; right: -400px; top: 0; max-width: 400px; width: 100%; height: 100vh; background-color: #f9f9f9; color: #8b8782; transition: all ease 0.5s;}
+#gnb .gnb-header {padding: 90px 100px 0; margin-bottom: 60px;}
+#gnb .gnb-header img {width: 200px;}
+#gnb nav {padding-left: 25px;}
+#gnb nav ul li a {position: relative; display: inline-block; padding: 10px 20px 10px 10px; font-size: 25px;}
+#gnb nav ul li:nth-child(6) a , #gnb nav ul li:nth-child(7) a {color: #cac4bd;}
+#gnb nav ul li a:before {content: ''; position: absolute; top: 0; left: 0; display: block; width: 0; height: 100%; background: url(../img/line-texture2.png); background-size: 5px; z-index: -1; transition: width 0.3s;}
+#gnb nav ul li a:hover:before {width: 100%;}
+#gnb .gnb-footer {position: absolute; bottom: 0; width: 100%;}
+#gnb .gnb-footer ul {overflow: hidden; line-height: 70px; border-top: 1px solid #cac4bd; text-align: center;}
+#gnb .gnb-footer ul li {float: left; font-family: 'Open Sans', sans-serif; font-size: 11px; letter-spacing: 2px; font-weight: bold;}
+#gnb .gnb-footer ul li + li {border-left: 1px solid #cac4bd;}
+#gnb .gnb-footer ul li:first-child {width: 240px;}
+#gnb .gnb-footer ul li a {display: block; width: 79px; height: 70px; background: no-repeat center; background-size: auto 35%;}
+#gnb .gnb-footer ul li .sns-ins {background-image: url(../img/sns-ins-grey.svg)}
+#gnb .gnb-footer ul li .sns-fb {background-image: url(../img/sns-fb-grey.svg)}
+#gnb .btn {position: absolute; top: 20px; left: 20px;}
+#gnb .btn-gnb.close:before , #gnb .btn-gnb.close:after {content: '';  position: absolute; top: 45%; left: 10%; display: block; width: 80%; height: 3px; background-color: #8b8782; }
+#gnb .btn-gnb.close:before {transform: rotateZ(-45deg);}
+#gnb .btn-gnb.close:after {transform: rotateZ(45deg);}
+/*main-footer*/
+#main-footer {color: #fff;}
+#main-footer h6 {font-size: 50px;}
+#main-footer p , footer address {font-family: 'Open Sans', sans-serif; font-size: 18px; color: #525252; line-height: 1.5;}
+#main-footer .red {color: #b11f24;}
+#main-footer a:hover {text-decoration: underline;}
+#main-footer .half {padding: 100px 8%; box-sizing: border-box;}
+#main-footer .right {background-color: #1c1c1c;}
+#main-footer .half.left {height: calc(50vh - 20px); background-color: #1f1f1f;}
+#main-footer .half.left.contact {transform: translateY(100%); background-color: #232323;}
+#main-footer .seek form {overflow: hidden;}
+#main-footer .seek input {display: block; float: left; width: 80%; height: 80px; margin-top: 20px; padding: 20px; box-sizing: border-box; border: none; background-color: #232323; color: #525252; font-size: 26px;}
+#main-footer .seek input[type="submit"] {width: 20%; background: #2f2f2f url(../img/shaka.svg) no-repeat center; background-size: 40% auto;}
+#main-footer .seek .sns {margin-top: 30px;}
+#main-footer .seek .sns a {display: block; width: 10vw; height: 10vw; margin-top: 5px; background: #517fa4 url(../img/sns-ins.svg) no-repeat center; background-size: auto 40%; transition: all 0.2s;}
+#main-footer .seek .sns .sns-ins:hover {background-color: #406582;}
+#main-footer .seek .sns .sns-fb {background-color: #2e4576; background-image: url(../img/sns-fb.svg);}
+#main-footer .copy {position: absolute; bottom: 0; width: 100%; height: 40px; background-color: #111;}
+#main-footer .copy p {text-align: center; line-height: 40px; font-size: 12px;}
+#main-footer .copy p a:before {content: '|'; padding: 0 10px;}
+@media screen and (max-width: 1024px) {
+    #main-footer .half {position: static; width: 100%;} 
+    #main-footer .half .center {position: relative; top: 50%; transform: translate(0,-50%); width: 100%;}
+    #main-footer .right {height: 50vh;}
+    #main-footer .half.left {height: calc(25vh - 20px);}
+    #main-footer .half.left.contact {transform: translate(0,0);}
+    #main-footer .sns {display: none;}
+}
+
+/*main-video*/
+#main-visual ,#money {color: #fff; text-align: center;}
+#main-visual video , #money video {position: absolute;top : 0; 
+	left : 50%;
+	min-width : 100%;
+	min-height : 100%;
+
+  transform: translate(-50%,0);
+	z-index : -1;}
+#main-visual .btn-play {width: 76px; height: 76px; margin: 30px auto 0;}
+#main-visual .btn-play .icon-play {width: 75px;}
+#main-visual .btn-play .icon-play .icon-play-circle {fill: transparent; stroke: #fff; stroke-width: 5; stroke-dasharray: 330; stroke-dashoffset: 330;}
+#main-visual .btn-play .icon-play .icon-play-triangle {fill: transparent; stroke: #fff; stroke-width: 5; stroke-dasharray: 145; stroke-dashoffset: 145; }
+#main-visual.show .btn-play .icon-play .icon-play-circle {animation: circle 1s forwards; animation-delay: 1s;}
+#main-visual.show .btn-play .icon-play .icon-play-triangle {animation: triangle 1s forwards; animation-delay: 1s;}
+/*intro*/
+#intro {background-color: #f5f0ea; text-align: center;}
+#intro .intro-logo {width: 60px; margin: 0 auto 30px;}
+#intro .intro-logo sgv {position: relative;}
+#intro .intro-logo .logo {fill:#424242;}
+#intro .photo {background-image: url(../img/intro.jpg);}
+#intro .title-area .cans {width: 160px;}
+#intro .title-area .cans #intro-cans {width: 160px;}
+#intro .cans {display: inline-block; width: 160px; margin-top: 30px;}
+#intro .cans #intro-can-red-wine {transform: translate(35%,0);}
+#intro .cans #intro-can-rose {transform: translate(-35%,0);}
+
+/*about-cans*/
+.about-cans .photo {background-size: cover; background-position: center;}
+.about-cans .photo.line:after {display: block; width: 100%; height: 100%; background: url(../img/line-texture-bg-overlay.png); background-size: 7px auto; content: '';}
+.about-cans .can {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: no-repeat; background-size: 800px auto; background-position: 50%;}
+.about-cans .can-title .title-area {z-index: 10;}
+.about-cans .can-title {box-sizing: border-box;}
+
+/*idnividual*/
+body.main #chardonnay , body.wines #chardonnay .can-title {background-color: #00b4b1;}
+#chardonnay .photo {background-image: url(../img/bg-chardonnay.jpg);}
+#chardonnay .can {background-image: url(../img/can-chardonnay.png);}
+#chardonnay .title-area .title {color: #f9e093;}
+#chardonnay .title-area .sub {color: #00908e;}
+#chardonnay .btn-more.color {background-color: #00908e;}
+#chardonnay .btn-more.color:hover {background-color: #007775;}
+
+body.main #red , body.wines #red .can-title {background-color: #b11f24;}
+#red .photo {background-image: url(../img/bg-red-wine.jpg);}
+#red .can {background-image: url(../img/can-red-wine.png);}
+#red .title-area .title {color: #9cd5c4;}
+#red .title-area .sub {color: #7d1619;}
+#red .btn-more.color {background-color: #7d1619;}
+#red .btn-more.color:hover {background-color: #671215;}
+
+body.main #rose , body.wines #rose .can-title {background-color: #243f93;}
+#rose .photo {background-image: url(../img/bg-rose.jpg);}
+#rose .can {background-image: url(../img/can-rose.png);}
+#rose .title-area .title {color: #f3896f;}
+#rose .title-area .sub {color: #162559;}
+#rose .btn-more.color {background-color: #162559;}
+#rose .btn-more.color:hover {background-color: #111d44;}
+
+body.main #sauvignon , body.wines #sauvignon .can-title {background-color: #74a345;}
+#sauvignon .photo {background-image: url(../img/bg-sauvignon-blanc.jpg);}
+#sauvignon .can {background-image: url(../img/can-sauvignon-blanc.png);}
+#sauvignon .title-area .title {color: #c2e8fb;}
+#sauvignon .title-area .sub {color: #537431;}
+#sauvignon .btn-more.color {background-color: #537431;}
+#sauvignon .btn-more.color:hover {background-color: #5d8237;}
+
+body.main #bubbles , body.wines #bubbles .can-title {background-color: #1d1e1e;}
+#bubbles .photo {background-image: url(../img/bg-bubbles.jpg);}
+#bubbles .can {background-image: url(../img/can-bubbles.png);}
+#bubbles .title-area .title:nth-child(1) {color: #eeb978;}
+#bubbles .title-area .title:nth-child(2) {color: #d0d275;}
+#bubbles .title-area .title:nth-child(3) {color: #b0d387;}
+#bubbles .title-area .title {color: #c2e8fb;}
+#bubbles .title-area .sub {color: #366660;}
+#bubbles .btn-more.color {background-color: #366660;}
+#bubbles .btn-more.color:hover {background-color: #2d5550;}
+/*etho*/
+#etho {text-align: center; color: #424242;}
+#etho:before {content: ''; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: linear-gradient(0deg,#f5f0ea 0,hsla(33,35%,94%,.7));}
+#etho figure.graphics {position: absolute; width: 100%; height: 100%; z-index: -1;}
+#etho img {position: absolute; width: 30%;}
+#etho img:nth-of-type(1) {top: 5%; left: 0;}
+#etho img:nth-of-type(2) {bottom: 5%; left: 5%;}
+#etho img:nth-of-type(3) {top: 15%; left: 35%; z-index: -1;}
+#etho img:nth-of-type(4) {bottom: 10%; left: 40%;}
+#etho img:nth-of-type(5) {bottom: 15%; right: -10%;}
+#etho video {position: absolute; width: 40%;}
+#etho video:nth-of-type(1) {top: 30%; left: 0;}
+#etho video:nth-of-type(2) {top: 5%; right: 0;}
+#etho video:nth-of-type(3) {bottom: 35%; right: 5%; width: 30%;}
+#etho figure.graphics > * {transform: translate(0,75%); transition: all 1s;}
+#etho.show figure.graphics > * {transform: translate(0,0);}
+#etho .btn-more.color {background-color: #424242; color: #fff;}
+#etho .btn-more.color:hover {background-color: #353535;}
+#etho .btn-down , #intro .btn-down {background-image: url(../img/hero-arrow-small-dark.png);}
+/*screw*/
+#screw {background: url(../img/screw.jpg) center; background-size: cover; text-align: center; color: #fff;}
+#screw .screw-logo {margin-bottom: 30px;}
+#screw .screw-logo .logo {fill: #fff;}
+#screw .btn-more {background-color: #fff; color: #424242; transform-origin: right;}
+#screw .btn-more.color:hover {background-color: #efefef;}
+#screw .btn-more.color:after {background-image: url(../img/button-arrow-dark.png);}
+
+/*sub*/
+body.wines .btn-more:nth-of-type(2) {margin-top: 5px;}
+body.wines .can-title:before , body.wines .can-title:after {content: ''; position: absolute; top: 0; left: 0; display: block; width: 100%; height: 100%; background: center center repeat; background-size: 120% auto; background-position: 0 -50%; transition: all ease;}
+body.wines .can-title:before {transition-duration: 2s;}
+body.wines .can-title:after {transition-duration: 2.5s;}
+body.wines .full.show .can-title:before , body.wines .full.show .can-title:after {background-position: 0 50%;}
+body.wines .about-cans .title-area .underline {padding-bottom: 20px;}
+body.wines .about-cans .title-area .underline:after {content: ''; position: relative; top: 20px; display: block; width: 70%; height: 7px; background: url(../img/line-texture2.png); background-size: 8px;}
+body.wines .about-cans .title-area .ml-of {display: inline-block; line-height: 0.6;}
+body.wines .about-cans .title-area .wine {display: inline-block; color: #fff;}
+body.wines .about-cans .title-area p strong , body.wines .about-cans .title-area p i {display: block;}
+body.wines .about-cans .title-area p {color: #fff;}
+body.wines .full .can.left {left: -25%; transform: translate(-100%,0) rotate(-35deg); transition: all 0.5s;}
+body.wines .full .can.right {left: auto; right: -25%; transform: translate(100%,0) rotate(35deg); transition: all 0.5s;}
+body.wines .full.show .can.left {transform: translate(0,0) rotate(35deg);}
+body.wines .full.show .can.right {transform: translate(0,0) rotate(-35deg);}
+
+body.wines #main-visual {background: url(../img/wines/hero.jpg) no-repeat center center; background-size: cover;}
+body.wines #chardonnay .photo {background-image: url(../img/wines/chardonnay-bg.jpg);}
+body.wines #red .photo {background-image: url(../img/wines/red-wine-bg.jpg);}
+body.wines #rose .photo {background-image: url(../img/wines/rose-bg.jpg);}
+body.wines #sauvignon .photo {background-image: url(../img/wines/sauvignon-blanc-bg.jpg);}
+body.wines #bubbles .photo {background-image: url(../img/wines/bubbles-bg.jpg);}
+
+body.wines #chardonnay .ml-of {color: #00908e;}
+body.wines #chardonnay .title-area p strong {color: #f9e093;}
+body.wines #chardonnay .can-title:before {background-image: url(../img/wines/chardonnay-pattern1.png);}
+body.wines #chardonnay .can-title:after {background-image: url(../img/wines/chardonnay-pattern2.png);}
+body.wines #red .ml-of {color: #7d1619;}
+body.wines #red .title-area p strong {color: #9cd5c4;}
+body.wines #red .can-title:before {background-image: url(../img/wines/red-wine-pattern1.png);}
+body.wines #red .can-title:after {background-image: url(../img/wines/red-wine-pattern2.png);}
+body.wines #rose .ml-of {color: #162559;}
+body.wines #rose .title-area p strong {color: #f3896f;}
+body.wines #rose .can-title:before {background-image: url(../img/wines/rose-pattern1.png);}
+body.wines #rose .can-title:after {background-image: url(../img/wines/rose-pattern2.png);}
+body.wines #sauvignon .ml-of {color: #537431;}
+body.wines #sauvignon .title-area p strong {color: #c2e8fb;}
+body.wines #sauvignon .can-title:before {background-image: url(../img/wines/sauvignon-blanc-pattern1.png);}
+body.wines #sauvignon .can-title:after {background-image: url(../img/wines/sauvignon-blanc-pattern2.png);}
+body.wines #bubbles .title-area h3 * {color: #eeb978;}
+body.wines #bubbles .title-area p:nth-of-type(1) {color: #d0d275;}
+body.wines #bubbles .title-area p:nth-of-type(2) {color: #b0d387;}
+body.wines #bubbles .title-area .bottom2top-wrap:nth-child(1) .underline:after {background-image: url(../img/wines/breaker-bubbles1.png);}
+body.wines #bubbles .title-area .bottom2top-wrap:nth-child(2) .underline:after {background-image: url(../img/wines/breaker-bubbles2.png);}
+body.wines #bubbles .can-title:before {background-image: url(../img/wines/bubbles-pattern1.png);}
+body.wines #bubbles .can-title:after {background-image: url(../img/wines/bubbles-pattern2.png);}
+/*cork*/
+body.cork {background: rgb(177, 31, 36);  transition: background 1s;}
+body.cork .full .title-area {color: #fff; text-align: center;}
+body.cork .full .icon-animation {display: inline-block; width: 250px; height: 250px; margin-bottom: 20px;}
+body.cork .full .icon-animation svg {fill: #fff;}
+body.cork .animation1 #recycle-arrows {transform-origin: center center;}
+body.cork .full .icon-animation .circle {fill: none; stroke: #fff; stroke-width: 2px; stroke-dasharray: 1260; stroke-dashoffset: 1260; transform: rotate(-90deg); transform-origin: center center;}
+body.cork .animation3 #break-bottle-rl {opacity: 0;}
+body.cork .animation3 #break-bottle-right {transform-origin: 214px 261px 0; transform: translate(11px,0) rotate(-90deg);}
+body.cork .animation3 #break-bottle-left {transform-origin: 187px 261px 0; transform: translate(-11px,0) rotate(90deg);}
+body.cork .animation3 #break-can {transform: translate(0,-250px);}
+body.cork .animation4 svg {width: 200px; margin-top: 40px;}
+body.cork .animation4 #equal-bottle {transform: translate(-36%,0);}
+body.cork .animation4 #equal-can-bottom {transform: translate(37%,0);}
+body.cork .animation4 #equal-can-top {transform: translate(0,60%);}
+body.cork .animation4 #equal-sign {transform: translate(-45px,0);}
+body.cork .animation5 .gear-cans {transform: translate(0,-120px);}
+body.cork .animation5 .gear-can-label {transform: translate(-10px,0);}
+/*animate*/
+
+#wrap.open .full {transform: translateX(-200px);}
+#wrap.open #gnb {right: 0;}
+
+.full .bottom2top-wrap , #gnb .bottom2top-wrap {overflow: hidden;}
+.full .bottom2top-wrap .bottom2top , #gnb .bottom2top-wrap .bottom2top {transform: translate(0,110%);}
+.full.show .bottom2top-wrap .bottom2top , #wrap.open #gnb .bottom2top-wrap .bottom2top {animation: bottom2top 1s forwards;}
+.full.show .bottom2top-wrap .delay1 , #wrap.open #gnb .bottom2top-wrap .delay1 {animation-delay: 0.1s;}
+.full.show .bottom2top-wrap .delay2 , #wrap.open #gnb .bottom2top-wrap .delay2 {animation-delay: 0.2s;}
+.full.show .bottom2top-wrap .delay3 , #wrap.open #gnb .bottom2top-wrap .delay3 {animation-delay: 0.3s;}
+.full.show .bottom2top-wrap .delay4 , #wrap.open #gnb .bottom2top-wrap .delay4 {animation-delay: 0.4s;}
+.full.show .bottom2top-wrap .delay5 , #wrap.open #gnb .bottom2top-wrap .delay5 {animation-delay: 0.5s;}
+.full.show .bottom2top-wrap .delay6 , #wrap.open #gnb .bottom2top-wrap .delay6 {animation-delay: 0.6s;}
+
+@keyframes bottom2top {
+    0% {transform: translateY(110%);} 
+    100%{transform: translateY(0);}}
+@keyframes circle {
+  0% {stroke-dashoffset: 330;}
+  100% {stroke-dashoffset: 0;}
+}
+@keyframes triangle {
+    0% {stroke-dashoffset: 145;}
+  100% {stroke-dashoffset: 0;}
+}
+
+
+#intro.show .cans #intro-can-red-wine {animation: introCan1 0.5s forwards; animation-delay: 1s;}
+#intro.show .cans #intro-can-rose {animation: introCan2 0.5s forwards; animation-delay: 1s;}
+@keyframes introCan1 {
+  0% {transform: translate(35%,0);}
+  100% {transform: translate(0,0);}
+}
+@keyframes introCan2 {
+  0% {transform: translate(-35%,0);}
+  100% {transform: translate(0,0);}
+}
+.full.show .animation1 #recycle-arrows {animation: rotateArrows 3s linear infinite;}
+.full.show .animation1 #recycle-can {transform: translate(0,10px); animation: floatCan 1.2s ease-in-out infinite alternate;}
+.full.show .animation1 #recycle-can-logo {transform: translate(-50px,0); animation: spinCan 3s linear infinite;}
+.full.show .animation1 #recycle-can-lines {transform: translate(-50px,0); animation: spinCan 3s linear infinite;}
+@keyframes rotateArrows {
+  0% {transform: rotateZ(0deg);}
+  100% {transform: rotateZ(360deg);}
+}
+@keyframes floatCan {
+  0% {transform: translate(0,10px);}
+  100% {transform: translate(0,-20px);}  
+}
+@keyframes spinCan {
+  0% {transform: translate(-50px,0);}
+  100% {transform: translate(45px,0);}
+}
+.full.show .animation2 #pack-can {transform: translate(-30px,0); animation: can2Right 0.5s linear forwards; animation-delay: 0.3s;}
+.full.show .animation2 #pack-moon {transform: translate(0,25px); animation: moon2top 0.5s forwards; animation-delay: 0.6s;}
+.full.show .icon-animation .circle {animation: drawCircle 1s ease-in-out forwards; animation-delay: 0.5s;}
+@keyframes can2Right {
+  0% {transform: translate(-30px,0);}
+  100% {transform: translate(0,0);}
+}
+@keyframes moon2top {
+  0% {transform: translate(0,25px);}
+  100% {transform: translate(0,0);}
+}
+@keyframes drawCircle {
+  0% {stroke-dashoffset: 1260;}
+  100% {stroke-dashoffset: 0;}
+}
+.full.show .animation3 #break-can {animation: can2bottom 0.5s linear forwards; animation-delay: 1.5s;}
+.full.show .animation3 #break-bottle {animation: opacity0 0.1s forwards; animation-delay: 1.6s;}
+.full.show .animation3 #break-bottle-rl {animation: opacity1 0.1s forwards; animation-delay: 1.6s;}
+.full.show .animation3 #break-bottle-right {animation:  bottleRight 1s forwards; animation-delay: 1.6s;}
+.full.show .animation3 #break-bottle-left {animation:  bottleLeft 1s forwards; animation-delay: 1.6s;}
+@keyframes can2bottom {
+  0% {transform: translate(0,-250px);}
+  100% {transform: translate(0,0);}
+}
+@keyframes opacity0{
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes opacity1{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes bottleRight {
+  0% {transform: translate(11px,0) rotate(-90deg);}
+  100% {transform: translate(0,0) rotate(0deg);}
+}
+@keyframes bottleLeft {
+  0% {transform: translate(-11px,0) rotate(90deg);}
+  100% {transform: translate(0px,0) rotate(0deg);}
+}
+
+.full.show .animation4 #equal-bottle {animation: equalBottle 0.5s cubic-bezier(.24,.72,.35,1.01) forwards; animation-delay: 0.6s;}
+.full.show .animation4 #equal-can-bottom {animation: equalCanBottom 0.5s cubic-bezier(.24,.72,.35,1.01) forwards; animation-delay: 0.6s;}
+.full.show .animation4 #equal-can-top {animation: equalCanTop 0.5s cubic-bezier(.24,.72,.35,1.01) forwards; animation-delay: 0.8s;}
+.full.show .animation4 #equal-sign {animation: equalSign 0.5s cubic-bezier(.24,.72,.35,1.01) forwards; animation-delay: 1s;}
+@keyframes equalBottle {
+  0% {transform: translate(-36%,0);}
+  100% {transform: translate(0,0);}
+}
+@keyframes equalCanBottom {
+  0% {transform: translate(37%,0);}
+  100% {transform: translate(0,0);}
+}
+@keyframes equalCanTop {
+  0% {transform: translate(0,60%);}
+  100% {transform: translate(0,0);}
+}
+@keyframes equalSign {
+  0% {transform: translate(-45px,0);}
+  100% {transform: translate(0,0);}
+}
+
+body.cork .animation5 .gear-cans {transform: translate(0,-120px);}
+body.cork .animation5 .gear-can-label {transform: translate(-10px,0);}
+.full.show .animation5 #gear-can-left {animation: gearCan 1s ease-in-out forwards; animation-delay: 0.5s;}
+.full.show .animation5 #gear-can-right {animation: gearCan 1s ease-in-out forwards; animation-delay: 0.8s;}
+.full.show .animation5 #gear-can-left .gear-can-label {animation: gearLabel 1s ease-in-out forwards; animation-delay: 0.5s;}
+.full.show .animation5 #gear-can-right .gear-can-label {animation: gearLabel 1s ease-in-out forwards; animation-delay: 0.8s;}
+@keyframes gearCan {
+  0% {transform: translate(0,-120px);}
+  100% {transform: translate(0,0);}
+}
+@keyframes gearLabel {
+  0% {transform: translate(-10px,0);}
+  100% {transform: translate(0,0);}
+}

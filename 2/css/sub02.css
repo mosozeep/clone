@@ -1,0 +1,179 @@
+@charset "utf-8";
+
+html {width: 100%; height: 100%;}
+body {width: 100%; height: 100%; font-family: 'Noto Sans KR' , '나눔 고딕' , sans-serif;  color: #585858; word-break: keep-all;}
+h2 {font-size: 28px; color: #333;}
+
+section article , .indicator {max-width: 1120px; margin: 0 auto;}
+
+section figure {position: relative; overflow: hidden; width: 100%; height: 100%;}
+section figure img {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); display: block; height: 100%;}
+
+.btn-brown { background: #a57432; color: #fff; transition: all 0.3s;}
+.btn-brown:hover {background: #663d07;}
+
+.btn-join:hover , .btn-more:hover {background: #ccc;}
+.sns a {display: inline-block; width: 20px; height: 20px; margin-right: 10px; background: url(../img/index/sns_ico.png) no-repeat;}
+.sns a:nth-child(2) {background-position: right -24px top 0;}
+.sns a:nth-child(3) {width: 10px; background-position: right 0 top 0;}
+
+section .text-area {position: absolute; top: 55%; transform: translateY(-50%); width: 100%; text-align: center; color: #fff;}
+section .text-area h3 {font-size: 30px; line-height: 1.1em;}
+section .text-area i {font-weight: 300; font-size: 15px; color: rgba(255, 255, 255, 0.65);}
+section .text-area p {margin-top: 30px; font-size: 20px; line-height: 1.2; font-weight: 300;}
+
+header .btn-join {word-break: break-all;}
+
+#head-visual {height: 350px; background: no-repeat center; background-size: cover;}
+.accommo #head-visual {background-image: url(../img/sub01/accommodations_visual_img.jpg);}
+
+/*lnb*/
+#wrap.scroll #lnb.scroll {top: 100px;}
+#lnb.scroll {position: fixed; top: 0; left: 0; width: 100%; z-index: 80;}
+#lnb {height: 50px; background: #e0e0e0; padding-left: 20px;}
+#lnb a {display: block; width: 140px; height: 50px; padding-left: 30px; line-height: 50px; font-size: 14px; background: #e0e0e0;}
+#lnb > ul > li {float: left;}
+#lnb > ul > li > a {position: relative; color: #a57432;}
+#lnb > ul > li:nth-child(1) > a {text-align: center; padding-left: 0;}
+#lnb > ul > li:nth-child(1) a , #lnb > ul > li:nth-child(2) a {width: 100px;}
+#lnb > ul > li + li > a:before {position: absolute; top: 50%; left: -20px; display: block; width: 20px; height: 1px; background: #cab190; content: '';}
+#lnb > ul > li + li > a:after {display: inline-block; width: 8px; height: 6px; margin-left: 10px; margin-top: -5px; background: url(../img/sub01/lnb_bu.png) no-repeat left center; content: '';}
+#lnb > ul > li + li > a:hover:after {background-position: right center;}
+#lnb > ul > li > .sub-menu {height: 0; overflow: hidden; transition: height 0.5s;}
+#lnb .sub-menu {position: absolute;/* display: none;*/ z-index: 10;}
+#lnb .sub-menu li {background: #e0e0e0; border-top: 1px solid #fff;}
+#lnb .sub-menu li:hover a {color: #a57432;}
+
+
+/*section-title*/
+.section-title {padding-top: 100px; margin-bottom: 80px;}
+.section-title h2 {padding-bottom: 40px; border-bottom: 1px solid #a57432; font-size: 40px; text-align: center;  font-weight: 500;}
+.section-title h2:after {display: block; margin-top: 5px; font-size: 20px; color: #666; font-weight: 400;}
+.section-title div {position: relative;}
+.section-title div p {width: 75%; padding-top: 30px; font-size: 18px; font-weight: 300;}
+.section-title div a {position: absolute; top: 30px; right: 0; display: block; width: 160px; height: 50px; line-height: 50px; text-align: center;}
+/*section-slide*/
+.section-slide {position: relative; width: 100%; overflow: hidden; background: #f2f2f2;}
+.section-slide .slide-wrap {width: 10000px;}
+.section-slide .slide-wrap .slide {float: left; width: 100vw; height: 904px; overflow: hidden; background: no-repeat center; background-size: cover;}
+.section-slide div.image-slide .indicator {position: static; transform: translate(0,0); margin-top: 5px;}
+.section-slide div.image-slide .indicator li {width: calc(100%/5 - 5px); height: 114px; margin: 0 2.5px; overflow: hidden;}
+.section-slide div.image-slide .indicator li a {position: relative; display: block; width: 100%; height: 100%; border: none; border-radius: 0;}
+.section-slide div.image-slide .indicator li a:after {content: ''; position: absolute; left: 0; top: 0; display: block; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4);}
+.section-slide div.image-slide .indicator li.on a:after {display: none;}
+.section-slide div.image-slide .indicator li.on a {border: none; background: none;}
+.section-slide div.image-slide .indicator li a img {position: absolute; left: 50%; top: 0; transform: translate(-50%,0); width: auto; height: 100%;}
+/*section-info*/
+.section-info {background: #f2f2f2; padding-bottom: 50px;}
+.section-info article {overflow: hidden; border-bottom: 1px solid #ccc;}
+@media screen and (min-width: 1120px) {
+  .section-info article {padding-left: 120px;}
+}
+.section-info h3 {float: left; width: 120px; padding-top: 40px; font-size: 20px; color: #333;}
+.section-info h3 span {display: block; font-size: 15px;}
+.section-info dl , .section-info ul {position: relative; float: left; width: 1000px; padding: 40px 0; overflow: hidden;}
+.section-info dl > div {overflow: auto; width: 50%;}
+.section-info dl .left {float: left;}
+.section-info dl .right {position: relative; float: right;}
+
+.section-info dl dt , .section-info dl dd {float: left;}
+.section-info dl dt {width: 85px; font-weight: 500; color: #333; line-height: 30px;}
+.section-info dl dd {width: 415px; line-height: 1.7;}
+.section-info dl dd span {color: #a57432;}
+.section-info .btn-dl {display: block; width: 110px; height: 35px; line-height: 35px; border: 1px solid #a57432; color: #a57432; text-align: center; margin-top: 10px; transition: all 0.3s;}
+.section-info .btn-dl:hover {background: #a57432; color: #fff;}
+.section-info ul {padding: 40px 0 10px 0;}
+.section-info ul li {position: relative; float: left; margin-right: 30px; margin-bottom: 30px; padding-left: 30px;}
+.section-info p {width: 1120px; margin: 40px auto 0; line-height: 2; font-size: 14px; color: #888;}
+.section-info .icon:before {position: absolute; top: 5px; left: 0; content: ''; display: inline-block; width: 23px; height: 21px; background: url(../img/sub01/ico_splite.png) no-repeat;}
+.section-info .icon-tv:before {background-position: left -50px top 0;}
+.section-info .icon-bidet:before {background-position: left -100px top 0;}
+.section-info .icon-bed:before {background-position: left -150px top 0;}
+.section-info .icon-air:before {background-position: left -200px top 0;}
+.section-info .icon-sheet:before {background-position: left -250px top 0;}
+.section-info .icon-out:before {background-position: left -300px top 0;}
+.section-info .icon-clothe:before {background-position: left -600px top 0;}
+.section-info .icon-hair:before {background-position: left -650px top 0;}
+.section-info .icon-body:before {background-position: left -700px top 0;}
+.section-info .icon-coffee:before {background-position: left -750px top 0;}
+.section-info .icon-port:before {background-position: left -800px top 0;}
+.section-info .icon-wine:before {background-position: left -850px top 0;}
+.section-info .icon-style:before {background-position: left -900px top 0;}
+.section-info .icon-tub:before {background-position: left -950px top 0;}
+.section-info .icon-:before {background-position: left -100px top 0;}
+/*section-explain*/
+.section-explain {margin-top: 150px;}
+.section-explain .photo-wrap {float: left; width: 50%; box-sizing: border-box;}
+.section-explain .photo-top {padding-right: 80px;}
+.section-explain .photo-bottom {padding-left: 80px;}
+.section-explain .photo {width: 100%; height: 560px;  background-position: center; background-size: cover;}
+.section-explain .text {position: relative; top: -50px; padding: 100px 0 0 110px; z-index: 10;}
+.section-explain .text:before {position: absolute; top: 0; left: 60px; display: block; width: 1px; height: 100%; background: #ccc; content: '';}
+.section-explain .text h4 {margin-bottom: 30px; font-size: 24px; color: #a57432;}
+.section-explain .text p {color: #888; font-size: 15px; line-height: 1.8;}
+.section-explain .photo-bottom .photo {margin-top: -50px;}
+.section-explain .photo-bottom .text {top: 0; padding: 0 0 100px 110px;}
+/*section-link*/
+.section-link {width: 100%; height: 200px;}
+.section-link div {overflow: hidden; position: relative; float: left; width: 50%; height: 100%; background: no-repeat left;}
+.section-link div a {display: block; height: 100%;}
+.section-link div p {position: absolute; top: 50%; right: 80px; transform: translateY(-50%); width: 100%; text-align: right; font-size: 24px; color: rgba(255, 255, 255, 0.8); font-weight: 300;}
+.section-link div.right p {left: 80px;text-align: left;}
+.section-link div p:after {display: block; font-size: 15px; margin-top: 10px;}
+
+/*individual*/
+.hinokki .section-title h2:after {content: 'Hinokki Suite';}
+.hinokki .section-link .hot-spring {background-image: url(../img/sub01/banner_seolHae_hot_spring.jpg);}
+.hinokki .section-link .golftel {background-image: url(../img/sub01/banner_golftel.jpg);}
+.hinokki .section-link .left p:after {content: 'SEOLHAE HOT SPRING';}
+.hinokki .section-link .right p:after {content: 'GOLGTEL';}
+
+@media screen and (max-width: 1119px) {
+  section article , .indicators , .section-info p {width: 90%;}
+  /*section-slide*/
+  .section-slide .slide-wrap .slide {height: 500px;}
+  .section-slide .indicators {text-align: center; padding-top: 5px;}
+  .section-slide .indicators a {height: 10vw;}
+  /*section-info*/
+  .section-info h3 {float: none; width: 100%; padding-top: 30px;}
+  .section-info h3 span {display: inline;}
+  .section-info dl , .section-info ul {float: none; width: 100%; padding-top: 15px;}
+  .section-info dl dt {width: 80px}
+  .section-info dl dd {width: calc(100% - 80px);}
+  .section-info dl .row + .row {margin-top: 10px;}
+  .section-info .btn-dl {margin-top: 15px;}
+  .section-info ul {padding-bottom: 15px;}
+  .section-info ul li {margin-right: 30px; margin-bottom: 20px;}
+  /*section-explain*/
+  .section-explain {margin-top: 80px;}
+  .section-explain .photo {height: 50vw;}
+  .section-explain .photo-top {padding-right: 30px;}
+  .section-explain .photo-bottom {padding-left: 30px;}
+  .section-explain .text {padding: 110px 0 0 80px;}
+  .section-explain .text:before {left: 40px;}
+  .section-explain .photo-bottom .text {padding: 0 0 100px 80px;}
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  #head-visual {height: 250px;}
+  /*footer*/
+  footer .bottom .sitemap {position: static; margin-bottom: 10px;}
+  footer .inner {width: 95%;}
+  footer .sns {width: 150px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

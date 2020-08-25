@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+body {color: #585858;}
+h2 {color: #333;}
+
+section .text-area {position: absolute; top: 55%; transform: translateY(-50%); width: 100%; text-align: center; color: #fff;}
+section .text-area h3 {font-size: 30px; line-height: 1.1em;}
+section .text-area i {font-weight: 300; font-size: 15px; color: rgba(255, 255, 255, 0.65);}
+section .text-area p {margin-top: 30px; font-size: 20px; line-height: 1.2; font-weight: 100;}
+
+/*heaeder*/
+#head-visual {height: 350px; background: no-repeat center; background-size: cover;}
+.accommo #head-visual {background-image: url(../img/sub01/accommodations_visual_img.jpg);}
+/*lnb*/
+#wrap.scroll #lnb.scroll {top: 100px;}
+#lnb.scroll {position: fixed; top: 0; left: 0; width: 100%; z-index: 80;}
+#lnb {height: 50px; background: #e0e0e0; padding-left: 20px;}
+#lnb a {display: block; width: 140px; height: 50px; padding-left: 30px; line-height: 50px; font-size: 14px; background: #e0e0e0;}
+#lnb > ul > li {float: left;}
+#lnb > ul > li > a {position: relative; color: #a57432;}
+#lnb > ul > li:nth-child(1) > a {text-align: center; padding-left: 0;}
+#lnb > ul > li:nth-child(1) a , #lnb > ul > li:nth-child(2) a {width: 100px;}
+#lnb > ul > li + li > a:before {position: absolute; top: 50%; left: -20px; display: block; width: 20px; height: 1px; background: #cab190; content: '';}
+#lnb > ul > li + li > a:after {display: inline-block; width: 8px; height: 6px; margin-left: 10px; margin-top: -5px; background: url(../img/sub01/lnb_bu.png) no-repeat left center; content: '';}
+#lnb > ul > li + li > a:hover:after {background-position: right center;}
+#lnb > ul > li > .sub-menu {height: 0; overflow: hidden; transition: height 0.5s;}
+#lnb .sub-menu {position: absolute;/* display: none;*/ z-index: 10;}
+#lnb .sub-menu li {background: #e0e0e0; border-top: 1px solid #fff;}
+#lnb .sub-menu li:hover a {color: #a57432;}
+
+/*settion-type*/
+.section-type {padding-top: 80px;}
+.section-type > h2 {margin-bottom: 80px; text-align: center; font-size: 40px; font-weight: 300;}
+.section-type article {margin-bottom: 80px;}
+.section-type .list-img {max-width: 1200px; width: 100%; position: relative; height: 560px; margin-bottom: 50px;}
+.section-type .list-img figure {position: relative; width: 100%; height: 100%; overflow: hidden;}
+.section-type .list-img figure img {position: absolute; top: 50%; left: 50%; width: auto; height: 100%; transform: translate(-50%,-50%);}
+.section-type article ul {width: 900px; margin: 0 auto; text-align: center;}
+.section-type article ul li {display: inline-block; margin-bottom: 30px;}
+.section-type article ul li a {position: relative; display: inline-block; width: 220px; height: 50px; text-align: center; font-size: 22px; line-height: 25px;}
+.section-type article ul li a:hover , .section-type article ul li a:hover:after {color: #a57432;}
+.section-type article ul .third-one a {width: 250px;}
+.section-type article ul li a:before {position: absolute; display: block; width: 1px; height: 30px; background: #ccc; content: '';}
+.section-type article ul .first-item a:before {display: none;}
+.section-type article ul li a:after {position: absolute; bottom: 0; width: 100%; display: block; font-size: 13px; color: #999; font-weight: 300;}
+
+#mountain-stay ul li:nth-child(1) a:after {content: 'Hinokki Suite';}
+#mountain-stay ul li:nth-child(2) a:after {content: 'Poliform Suite';}
+#mountain-stay ul li:nth-child(3) a:after {content: 'Pool Suite';}
+#mountain-stay ul li:nth-child(4) a:after {content: 'Spa Suite A';}
+#mountain-stay ul li:nth-child(5) a:after {content: 'Spa Suite B';}
+#mountain-stay ul li:nth-child(6) a:after {content: 'Classic Suite A';}
+#mountain-stay ul li:nth-child(7) a:after {content: 'Classic Suite B';}
+
+#hot-spring ul li:nth-child(1) a:after {content: 'Regular Pool Suite';}
+#hot-spring ul li:nth-child(2) a:after {content: 'Deluxe Pool Suite';}
+#hot-spring ul li:nth-child(3) a:after {content: 'Garden Suite';}
+#hot-spring ul li:nth-child(4) a:after {content: 'Triple Suite';}
+#hot-spring ul li:nth-child(5) a:after {content: 'Premium Suite';}
+#hot-spring ul li:nth-child(6) a:after {content: 'Cinema Suite';}
+#hot-spring ul li:nth-child(7) a:after {content: 'T-Room Suite';}
+#hot-spring ul li:nth-child(8) a:after {content: 'Deluxe Family Suite';}
+#hot-spring ul li:nth-child(9) a:after {content: 'Triple Family Suite';}
+#hot-spring ul li:nth-child(10) a:after {content: 'Deluxe';}
+#hot-spring ul li:nth-child(11) a:after {content: 'Regular';}
+#hot-spring ul li:nth-child(12) a:after {content: 'Studio';}
+
+#golftel ul li:nth-child(1) a:after {content: '40 Pyeong';}
+#golftel ul li:nth-child(2) a:after {content: '50 Pyeong';}
+/*btn-info*/
+#btn-info {border-top: 1px solid #ccc; text-align: center; padding-top: 30px;}
+#btn-info a {display: inline-block; padding: 0 50px; line-height: 50px;}
+
+@media screen and (min-width: 1200px) {
+  section article {width: 1200px; margin: 0 auto;}
+}
+@media screen and (max-width: 900px) and (min-width: 768px) {
+  .section-type article ul {width: 95%;}
+  .section-type article ul li {width: 24%; box-sizing: border-box;}
+  .section-type article ul li a {width: 100%; height: 50px; font-size: 18px; line-height: 25px;}
+  .section-type article ul .third-one {width: 190px;}
+  .section-type article ul .third-one a {width: 100%;}
+  .section-type article ul li a:after {font-size: 11px;}
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  #head-visual {height: 250px;}
+    .section-type .list-img {width: 100%; height: 400px; margin-bottom: 50px;}
+.section-type .list-img figure {position: relative; width: 100%; height: 100%; overflow: hidden;}
+.section-type .list-img figure img {position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 100%;}
+}
+

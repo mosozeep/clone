@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+#wrap {width: 100vw; height: 100vh; overflow: hidden;}
+#sub-menu {width: 100%; height: 100%; overflow: hidden;}
+#sub-menu div.img-slide {margin: 0; width: 33.3vw; height: 100%; z-index: 20;}
+#sub-menu ul.slide {position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 20;}
+#sub-menu ul.slide li {position: absolute; padding: 0;}
+#sub-menu ul li a {position: relative; left: 50%; top: 52%; transform: translate(-50%,-50%); display: inline-block; width: 60%;}
+#sub-menu ul li img {width: 100%;}
+#sub-menu ul {position: absolute;}
+#sub-menu ul.slide.shadow {z-index: -1;}
+#cursor {position: absolute; top: 50%; left: 50vw; transform: translate(-50%,-50%); width: 40px; height: 40px; border-radius: 50%; background: #000; animation: circleSize 1s infinite alternate; transition: width 0.5s, height 0.5s; z-index: 20;}
+#cursor:after {content: 'Swipe!'; position: absolute; top: 110%; left: 50%; transform: translate(-50%,0); font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 20px;}
+#cursor.img {width: 200px; height: 200px;}
+@keyframes circleSize {
+  0% {transform: translate(-50%,-50%) scale(1);}
+  100% {transform: translate(-50%,-50%) scale(1.2);}
+}
+#cursor.img:after {content: 'Click!'; left: 0; transform: translate(0,-100%);}

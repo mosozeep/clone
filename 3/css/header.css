@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');
+
+
+@import url(reset.css);
+
+header {position: fixed; width: 100vw; height: 100px; font-family: 'Rajdhani', sans-serif; z-index: 100;}
+header .logo {position: absolute; top: 50%; transform: translateY(-50%); left: 50px; height: 45px; padding: 0 10px 0 60px; background: #fff; z-index: 10; text-transform: uppercase; font-size: 28px;}
+header .logo:before {position: absolute; left: 10px; display: block; width: 45px; height: 45px; background: url(../img/logo.png) no-repeat center; background-size: contain; content: '';}
+header .logo span {font-size: 35px;}
+header .gnb {position: absolute; top: 30px; right: 50px; text-align: right; z-index: 100;}
+header .gnb a {display: inline-block; height: 32px; padding: 0 10px; background: #fff; font-size: 25px; letter-spacing: -1px;}
+
+header .gnb .btn-menu {position: relative;}
+
+header .gnb .btn-menu:hover .gnb-menu {display: block;}
+header .gnb .gnb-menu {overflow: hidden; height: 0; position: relative; top: 50px; transition: height 0.5s linear , opacity 1s; opacity: 0;}
+header.open .gnb .gnb-menu {opacity: 1;}
+header .gnb .gnb-menu li {margin-bottom: 20px;}
+header .gnb .gnb-menu a {position: relative; height: auto; padding: 0; background: transparent; color: #fff; font-family: 'Rokkitt', serif; font-size: 1.4vw;}
+header .gnb .gnb-menu a:after {content: ''; position: absolute; top: 50%; right: 0; transform: translate(0, -50%); display: block; width: 0; height: 100%; transition: all 0.3s; z-index: -1;}
+header .gnb .gnb-menu a:hover:after {width: 100%;}
+header .gnb .gnb-menu li:nth-child(1) a:hover:after {background: red;}
+header .gnb .gnb-menu li:nth-child(2) a:hover:after {background: orange;}
+header .gnb .gnb-menu li:nth-child(3) a:hover:after {background: green;}
+header .gnb .gnb-menu li:nth-child(4) a:hover:after {background: navy;}
+header .gnb .gnb-menu li:nth-child(5) a:hover:after {background: purple;}
+header .gnb .gnb-menu li:nth-child(6) a:hover:after {background: hotpink;}
+
+header .svg-wrap {position: absolute; top: 0; right: 0; width: 25vw; height: 0; transition: height 1s; background: red;}
+header.open .svg-wrap {height: 100vh;}
+header #gnb-bg {position: absolute; top: 0; right: 0; width: 25vw; height: 0; transition: height 1s; background: red;}
+header.open #gnb-bg {height: 100vh;}
+header #gnb-bg {width: 100%; height: 100%;}
+header.open #gnb-bg {z-index: 50;}
+header #gnb-bg .circle {fill: #000; transform: scale(0); transform-origin: 25vw 0; transition: transform 1.2s ease;}
+header.open #gnb-bg .circle {transform: scale(60);}

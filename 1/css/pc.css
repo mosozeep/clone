@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+section .title-area .sup {font-size: 30px; margin: 20px 0 15px;}
+section .title-area .title {font-size: 75px;}
+section .title-area p .text {font-size: 20px;}
+section .title-area .sub {font-size: 23px;}
+
+.full .line-bg {width: 400px; height: 600px;}
+/*intro*/
+
+#intro .intro-logo {width: 87px; margin: 0 auto 30px;}
+
+.about-cans .title-area .title {font-size: 60px;}
+body.main .about-cans .can {background-attachment: fixed;}
+.about-cans .can-title {padding: 0 12%;}
+
+#main-footer .half {width: 50%; box-sizing: border-box;}
+#main-footer .half.left {height: calc(50vh - 20px);}
+#main-footer .half.left.contact {transform: translate(0,100%);}
+
+/*sub*/
+body.wines .about-cans .can-title {padding: 0 9%;}
+body.wines .about-cans .title-area .bottom2top-wrap {padding-bottom: 20px;}
+body.wines .about-cans .title-area .bottom2top-wrap + .bottom2top-wrap {margin-top: 20px;}
+
+
+body.wines .about-cans .title-area .ml-of .num {font-size: 47px;}
+body.wines .about-cans .title-area .ml-of .word {font-size: 25px;}
+
+body.wines .about-cans .title-area .wine {font-size: 30px;}
+body.wines .about-cans .title-area p {font-size: 30px;}
+body.wines .about-cans .title-area p strong {font-size: 50px;}
+
+body.wines .about-cans .can {background-size: 1000px auto;}
+
+body.wines #bubbles .btn-more:last-child {position: absolute; bottom: 0; left: 180px;}
+
